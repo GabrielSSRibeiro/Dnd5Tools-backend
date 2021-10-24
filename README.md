@@ -1,7 +1,8 @@
-## Boilerplate-backend
+## ASCENDANCE: D&D 5 Tools
 
 Contents
-- Nodemon
+- Global styles
 - Routes
-- Controllers
-- Cors
+- Axios
+- Context
+- Firebase
