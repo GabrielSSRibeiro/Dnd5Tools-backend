@@ -9,7 +9,7 @@ const app = express();
 mongoose.set("strictQuery", false);
 mongoose
   .connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@dnd5tools.xvyjhz0.mongodb.net/Dnd5Tools`)
-  .then((response) => console.log("connected to mongodb"))
+  .then((r) => console.log("connected to mongodb"))
   .catch((err) => console.log(err));
 
 app.use(cors());
