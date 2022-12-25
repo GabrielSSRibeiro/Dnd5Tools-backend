@@ -1,9 +1,12 @@
 const { Router } = require("express");
 const routes = Router();
 
-const myController = require("./controllers/myController");
+const CreatureController = require("./controllers/CreatureController");
 
-routes.get("/home", myController.index);
-routes.post("/home", myController.store);
+routes.get("/GetCreature", CreatureController.show);
+routes.get("/GetCreatures", CreatureController.index);
+routes.post("/SaveCreature", CreatureController.store);
+routes.put("/UpdateCreature", CreatureController.update);
+routes.delete("/DeleteCreature", CreatureController.delete);
 
 module.exports = routes;
