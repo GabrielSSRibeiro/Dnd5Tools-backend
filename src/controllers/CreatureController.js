@@ -1,32 +1,38 @@
 const Creature = require("../models/Creature");
 
 module.exports = {
-  async show(req, res) {
+  async GetCreature(req, res) {
     const creature = await Creature.findById(req.query.id);
 
     return res.json(creature);
   },
 
-  async index(req, res) {
+  async GetCreatures(req, res) {
     const creatures = await Creature.find();
 
     return res.json(creatures);
   },
 
-  async store(req, res) {
+  async GetCreaturesByOwner(req, res) {
+    const creatures = await Creature.find({ owner: req.query.owner });
+
+    return res.json(creatures);
+  },
+
+  async SaveCreature(req, res) {
     const creature = new Creature(req.body);
     const saveResponse = await creature.save();
 
     return res.json(saveResponse);
   },
 
-  async update(req, res) {
-    const updateResponse = await Creature.findOneAndUpdate(req.body.id, req.body);
+  async UpdateCreature(req, res) {
+    const updateResponse = await Creature.findOneAndUpdate(req.body._id, req.body);
 
     return res.json(updateResponse);
   },
 
-  async delete(req, res) {
+  async DeleteCreature(req, res) {
     const deleteResponse = await Creature.findByIdAndDelete(req.query.id);
 
     return res.json(deleteResponse);

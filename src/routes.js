@@ -3,10 +3,11 @@ const routes = Router();
 
 const CreatureController = require("./controllers/CreatureController");
 
-routes.get("/GetCreature", CreatureController.show);
-routes.get("/GetCreatures", CreatureController.index);
-routes.post("/SaveCreature", CreatureController.store);
-routes.put("/UpdateCreature", CreatureController.update);
-routes.delete("/DeleteCreature", CreatureController.delete);
+routes.get("/GetCreature", CreatureController.GetCreature);
+routes.get("/GetCreatures", CreatureController.GetCreatures);
+routes.get("/GetCreaturesByOwner", CreatureController.GetCreaturesByOwner);
+routes.post("/SaveCreature", CreatureController.SaveCreature);
+routes.put("/UpdateCreature", CreatureController.UpdateCreature);
+routes.delete("/DeleteCreature", CreatureController.DeleteCreature);
 
 module.exports = routes;
