@@ -27,7 +27,7 @@ module.exports = {
   },
 
   async UpdateCreature(req, res) {
-    const updateResponse = await Creature.findOneAndUpdate(req.body._id, req.body);
+    const updateResponse = await Creature.findOneAndUpdate({ _id: req.body._id }, req.body, { returnOriginal: false });
 
     return res.json(updateResponse);
   },
