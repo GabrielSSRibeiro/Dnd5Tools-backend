@@ -82,6 +82,7 @@ const CreatureSchema = new mongoose.Schema(
         isSpell: Boolean,
       },
     ],
+    reactionsPerRound: Number,
     aura: {
       _id: false,
       name: String,
