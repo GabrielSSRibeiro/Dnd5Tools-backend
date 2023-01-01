@@ -57,6 +57,7 @@ const CreatureSchema = new mongoose.Schema(
         condition: Number,
         conditionDuration: Number,
         difficultyClass: Number,
+        savingThrowAttribute: Number,
         associatedWeakSpot: String,
         isSpell: Boolean,
         repetitions: Number,
@@ -78,6 +79,7 @@ const CreatureSchema = new mongoose.Schema(
         condition: Number,
         conditionDuration: Number,
         difficultyClass: Number,
+        savingThrowAttribute: Number,
         associatedWeakSpot: String,
         isSpell: Boolean,
       },
@@ -96,6 +98,7 @@ const CreatureSchema = new mongoose.Schema(
       condition: Number,
       conditionDuration: Number,
       difficultyClass: Number,
+      savingThrowAttribute: Number,
       associatedWeakSpot: String,
     },
     treasures: [
