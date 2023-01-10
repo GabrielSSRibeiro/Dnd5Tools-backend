@@ -1,3 +1,4 @@
+const { default: mongoose } = require("mongoose");
 const Creature = require("../models/Creature");
 
 module.exports = {
@@ -27,6 +28,7 @@ module.exports = {
   },
 
   async SaveCreature(req, res) {
+    req.body._id = mongoose.Types.ObjectId();
     const creature = new Creature(req.body);
     const saveResponse = await creature.save();
 
