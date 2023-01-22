@@ -15,8 +15,11 @@ module.exports = {
   },
 
   async GetCreaturesByOwner(req, res) {
-    const creatures = await Creature.find({ $or: [{ owner: process.env.ADMIN_USER }, { owner: req.query.owner }] });
-    if (req.query.owner !== process.env.ADMIN_USER) {
+    let creatures = [];
+    if (req.query.owner === process.env.ADMIN_USER) {
+      creatures = await Creature.find();
+    } else {
+      creatures = await Creature.find({ $or: [{ owner: process.env.ADMIN_USER }, { owner: req.query.owner }] });
       creatures
         .filter((c) => c.owner === process.env.ADMIN_USER)
         .forEach((c) => {
