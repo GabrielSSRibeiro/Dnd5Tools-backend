@@ -107,6 +107,7 @@ const CreatureSchema = new mongoose.Schema(
         name: String,
         description: String,
         type: Number,
+        frequency: Number,
         goldPieces: {
           quantity: Number,
         },
