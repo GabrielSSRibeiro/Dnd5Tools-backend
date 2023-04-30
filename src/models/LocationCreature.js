@@ -7,7 +7,7 @@ module.exports = {
       schedule: Number,
       precipitation: Number,
       temperature: Number,
-      context: Number,
+      context: String,
       encounterFrequency: Number,
     },
   ],
