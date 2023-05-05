@@ -2,6 +2,7 @@ const { Router } = require("express");
 const routes = Router();
 
 const CreatureController = require("./controllers/CreatureController");
+const LocationController = require("./controllers/LocationController");
 const CombatConfigController = require("./controllers/CombatConfigController");
 
 routes.get("/GetCreature", CreatureController.GetCreature);
@@ -10,6 +11,13 @@ routes.get("/GetCreaturesByOwner", CreatureController.GetCreaturesByOwner);
 routes.post("/SaveCreature", CreatureController.SaveCreature);
 routes.put("/UpdateCreature", CreatureController.UpdateCreature);
 routes.delete("/DeleteCreature", CreatureController.DeleteCreature);
+
+routes.get("/GetLocation", LocationController.GetLocation);
+routes.get("/GetLocations", LocationController.GetLocations);
+routes.get("/GetLocationsByOwner", LocationController.GetLocationsByOwner);
+routes.post("/SaveLocation", LocationController.SaveLocation);
+routes.put("/UpdateLocation", LocationController.UpdateLocation);
+routes.delete("/DeleteLocation", LocationController.DeleteLocation);
 
 routes.get("/GetCombatConfig", CombatConfigController.GetCombatConfig);
 routes.get("/GetCombatConfigByOwner", CombatConfigController.GetCombatConfigByOwner);
