@@ -34,9 +34,25 @@ module.exports = {
     return res.json(updateResponse);
   },
 
-  async DeleteLocation(req, res) {
-    const deleteResponse = await Location.findByIdAndDelete(req.query.id);
+  async UpdateLocations(req, res) {
+    const filter = {
+      _id: { $in: req.body.ids },
+    };
+    const updates = req.body.updates.map((update) => {
+      let $set = {};
+      update.forEach((u) => {
+        $set[u.field] = u.value;
+      });
 
+      return { $set };
+    });
+
+    const updateResponse = await Location.updateMany(filter, updates, { returnOriginal: false });
+    return res.json(updateResponse);
+  },
+
+  async DeleteLocations(req, res) {
+    const deleteResponse = await Location.deleteMany({ _id: { $in: req.query.ids } });
     return res.json(deleteResponse);
   },
 };

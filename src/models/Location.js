@@ -7,7 +7,10 @@ const LocationSchema = new mongoose.Schema(
     owner: String,
     name: String,
     exteriorLocationId: String,
+    isHidden: Boolean,
     radiusMultiplier: Number,
+    distanceMultiplier: Number,
+    distanceAngle: Number,
     size: Number,
     traversal: {
       type: Number,

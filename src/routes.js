@@ -17,7 +17,8 @@ routes.get("/GetLocations", LocationController.GetLocations);
 routes.get("/GetLocationsByOwner", LocationController.GetLocationsByOwner);
 routes.post("/SaveLocation", LocationController.SaveLocation);
 routes.put("/UpdateLocation", LocationController.UpdateLocation);
-routes.delete("/DeleteLocation", LocationController.DeleteLocation);
+routes.put("/UpdateLocations", LocationController.UpdateLocations);
+routes.delete("/DeleteLocations", LocationController.DeleteLocations);
 
 routes.get("/GetCombatConfig", CombatConfigController.GetCombatConfig);
 routes.get("/GetCombatConfigByOwner", CombatConfigController.GetCombatConfigByOwner);
