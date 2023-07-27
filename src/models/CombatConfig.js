@@ -8,6 +8,7 @@ const CombatConfigSchema = new mongoose.Schema(
     level: Number,
     characterGroups: [[String]],
     inactiveGroup: [String],
+    zoom: Number,
     world: {
       name: String,
       traversal: {
