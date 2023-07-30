@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const travelNode = require("./travelNode");
 const locationContext = require("./LocationContext");
 const locationCreature = require("./LocationCreature");
 
@@ -9,6 +10,15 @@ const CombatConfigSchema = new mongoose.Schema(
     characterGroups: [[String]],
     inactiveGroup: [String],
     zoom: Number,
+    travel: {
+      currentNode: travelNode,
+      travelNodes: [
+        {
+          _id: false,
+          ...travelNode,
+        },
+      ],
+    },
     world: {
       name: String,
       traversal: {
