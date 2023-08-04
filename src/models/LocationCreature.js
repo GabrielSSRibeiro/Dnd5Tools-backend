@@ -1,6 +1,5 @@
 module.exports = {
   creatureId: String,
-  groupSize: Number,
   routines: [
     {
       _id: false,
@@ -8,6 +7,7 @@ module.exports = {
       precipitation: Number,
       temperature: Number,
       context: String,
+      groupSize: Number,
       encounterFrequency: Number,
     },
   ],
