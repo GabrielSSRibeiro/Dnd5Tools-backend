@@ -11,6 +11,10 @@ const CombatConfigSchema = new mongoose.Schema(
     inactiveGroup: [String],
     zoom: Number,
     travel: {
+      schedule: Number,
+      exhaustionTimer: Number,
+      precipitation: Number,
+      temperature: Number,
       currentNode: travelNode,
       travelNodes: [
         {
