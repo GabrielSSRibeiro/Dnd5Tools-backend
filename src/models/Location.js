@@ -45,7 +45,6 @@ const LocationSchema = new mongoose.Schema(
       ],
     },
     interaction: {
-      isCurrent: Boolean,
       type: Number,
       isHazardous: Boolean,
       // condition: Number,
