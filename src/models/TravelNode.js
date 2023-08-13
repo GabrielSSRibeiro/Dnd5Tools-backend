@@ -1,5 +1,5 @@
 module.exports = {
-  isHidden: Boolean,
+  name: String,
   x: Number,
   y: Number,
   angle: Number,
