@@ -37,7 +37,7 @@ const LocationSchema = new mongoose.Schema(
           // damageIntensity: Number,
           // damageType: Number,
           material: {
-            Probability: Number,
+            probability: Number,
             rarity: Number,
             // extractionDifficulty: Number,
           },
