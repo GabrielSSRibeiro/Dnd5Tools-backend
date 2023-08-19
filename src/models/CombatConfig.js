@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const travelNode = require("./travelNode");
+const travelNode = require("./TravelNode");
 const locationContext = require("./LocationContext");
 const locationCreature = require("./LocationCreature");
 
