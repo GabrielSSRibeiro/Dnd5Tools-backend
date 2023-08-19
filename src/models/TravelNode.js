@@ -7,7 +7,7 @@ module.exports = {
   creatures: [
     {
       _id: false,
-      creatureId: Number,
+      creatureId: String,
       number: Number,
     },
   ],
