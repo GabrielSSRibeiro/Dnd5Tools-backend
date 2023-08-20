@@ -9,6 +9,7 @@ module.exports = {
       _id: false,
       creatureId: String,
       number: Number,
+      condition: Number,
     },
   ],
   x: Number,
