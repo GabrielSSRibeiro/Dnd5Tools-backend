@@ -16,4 +16,5 @@ module.exports = {
   y: Number,
   angle: Number,
   locId: String,
+  needsReposition: Boolean,
 };
