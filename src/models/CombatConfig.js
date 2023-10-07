@@ -15,6 +15,7 @@ const CombatConfigSchema = new mongoose.Schema(
       exhaustionTimer: Number,
       precipitation: Number,
       oriented: Boolean,
+      isOverlook: Boolean,
       temperature: Number,
       nextConditionsUpdate: Number,
       pace: Number,
