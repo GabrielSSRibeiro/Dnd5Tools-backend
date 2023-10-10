@@ -6,6 +6,7 @@ const locationCreature = require("./LocationCreature");
 const CombatConfigSchema = new mongoose.Schema(
   {
     owner: String,
+    notes: String,
     level: Number,
     characterGroups: [[String]],
     inactiveGroup: [String],
