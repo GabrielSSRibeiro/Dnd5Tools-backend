@@ -27,4 +27,6 @@ routes.post("/SaveCombatConfig", CombatConfigController.SaveCombatConfig);
 routes.put("/UpdateCombatConfig", CombatConfigController.UpdateCombatConfig);
 routes.delete("/DeleteCombatConfig", CombatConfigController.DeleteCombatConfig);
 
+routes.get("/Ping", (req, res) => res.json(true));
+
 module.exports = routes;
