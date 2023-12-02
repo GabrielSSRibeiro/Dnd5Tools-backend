@@ -3,6 +3,8 @@ module.exports = {
   name: String,
   firstImpressions: String,
   details: String,
+  rumors: String,
+  secrets: String,
   precipitationFrequency: Number,
   intenseTemperatureFrequency: Number,
   panoramicVision: Number,
