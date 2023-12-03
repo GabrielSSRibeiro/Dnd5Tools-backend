@@ -7,6 +7,7 @@ const CombatConfigSchema = new mongoose.Schema(
   {
     owner: String,
     notes: String,
+    sandbox: String,
     level: Number,
     characterGroups: [[String]],
     inactiveGroup: [String],
