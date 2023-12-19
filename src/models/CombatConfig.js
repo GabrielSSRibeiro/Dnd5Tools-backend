@@ -20,6 +20,7 @@ const CombatConfigSchema = new mongoose.Schema(
       isOverlook: Boolean,
       temperature: Number,
       nextConditionsUpdate: Number,
+      cummulativeEncounterChance: Number,
       pace: Number,
       mount: Number,
       load: Number,
