@@ -54,6 +54,7 @@ const LocationSchema = new mongoose.Schema(
           purpose: String,
           firstImpressions: String,
           secrets: String,
+          size: Number,
           type: Number,
           isHazardous: Boolean,
           rarity: Number,
