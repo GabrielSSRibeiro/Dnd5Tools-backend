@@ -14,15 +14,15 @@ const LocationSchema = new mongoose.Schema(
     size: Number,
     traversal: {
       type: Number,
-      irregularTerrainFrequency: Number,
-      partitions: [
-        {
-          _id: false,
-          type: Number,
-          magnitude: Number,
-          quantity: Number,
-        },
-      ],
+      // irregularTerrainFrequency: Number,
+      // partitions: [
+      //   {
+      //     _id: false,
+      //     type: Number,
+      //     magnitude: Number,
+      //     quantity: Number,
+      //   },
+      // ],
       elements: [
         {
           _id: false,
@@ -47,13 +47,21 @@ const LocationSchema = new mongoose.Schema(
     interaction: {
       type: Number,
       isHazardous: Boolean,
-      // condition: Number,
-      // conditionDuration: Number,
-      // difficultyClass: Number,
-      // savingThrowAttribute: Number,
-      // damageIntensity: Number,
-      // damageType: Number,
       rarity: Number,
+      rooms: [
+        {
+          _id: false,
+          type: Number,
+          isHazardous: Boolean,
+          rarity: Number,
+          creatures: [
+            {
+              _id: false,
+              ...locationCreature,
+            },
+          ],
+        },
+      ],
     },
     reference: {
       distance: Number,
