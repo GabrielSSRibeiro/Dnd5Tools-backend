@@ -60,8 +60,14 @@ const LocationSchema = new mongoose.Schema(
           bottom: Number,
           left: Number,
           right: Number,
-          floor: Number,
-          ceiling: Number,
+          floor: {
+            connection: Number,
+            direction: Number,
+          },
+          ceiling: {
+            connection: Number,
+            direction: Number,
+          },
           type: Number,
           isHazardous: Boolean,
           rarity: Number,
