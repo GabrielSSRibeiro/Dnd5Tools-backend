@@ -1,5 +1,9 @@
 module.exports = {
   creatureId: String,
+  population: {
+    value: Number,
+    current: Number,
+  },
   routines: [
     {
       _id: false,
