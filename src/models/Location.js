@@ -77,6 +77,13 @@ const LocationSchema = new mongoose.Schema(
               ...locationCreature,
             },
           ],
+          currentCreatures: [
+            {
+              _id: false,
+              creatureId: String,
+              current: Number,
+            },
+          ],
         },
       ],
     },
