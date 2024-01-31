@@ -48,6 +48,13 @@ const LocationSchema = new mongoose.Schema(
       type: Number,
       isHazardous: Boolean,
       rarity: Number,
+      currentCreatures: [
+        {
+          _id: false,
+          creatureId: String,
+          current: Number,
+        },
+      ],
       rooms: [
         {
           _id: false,
