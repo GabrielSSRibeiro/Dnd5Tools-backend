@@ -63,16 +63,30 @@ const LocationSchema = new mongoose.Schema(
           secrets: String,
           size: Number,
           height: Number,
-          top: Number,
-          bottom: Number,
-          left: Number,
-          right: Number,
+          top: {
+            connection: Number,
+            description: String,
+          },
+          bottom: {
+            connection: Number,
+            description: String,
+          },
+          left: {
+            connection: Number,
+            description: String,
+          },
+          right: {
+            connection: Number,
+            description: String,
+          },
           floor: {
             connection: Number,
+            description: String,
             direction: Number,
           },
           ceiling: {
             connection: Number,
+            description: String,
             direction: Number,
           },
           type: Number,
