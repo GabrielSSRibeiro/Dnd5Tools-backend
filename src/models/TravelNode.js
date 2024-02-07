@@ -17,4 +17,5 @@ module.exports = {
   angle: Number,
   locId: String,
   needsReposition: Boolean,
+  roomIndex: Number,
 };
