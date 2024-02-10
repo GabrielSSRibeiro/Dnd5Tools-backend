@@ -52,7 +52,7 @@ const LocationSchema = new mongoose.Schema(
         {
           _id: false,
           creatureId: String,
-          current: Number,
+          isDead: Boolean,
         },
       ],
       rooms: [
@@ -102,7 +102,7 @@ const LocationSchema = new mongoose.Schema(
             {
               _id: false,
               creatureId: String,
-              current: Number,
+              isDead: Boolean,
             },
           ],
         },
