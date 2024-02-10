@@ -8,7 +8,7 @@ module.exports = {
     {
       _id: false,
       creatureId: String,
-      number: Number,
+      isDead: Boolean,
       condition: Number,
     },
   ],
