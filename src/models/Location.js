@@ -111,6 +111,7 @@ const LocationSchema = new mongoose.Schema(
     reference: {
       distance: Number,
       direction: Number,
+      directionMod: Number,
       location: String,
       connectionType: Number,
     },
