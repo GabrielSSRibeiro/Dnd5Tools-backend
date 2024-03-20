@@ -46,6 +46,7 @@ const LocationSchema = new mongoose.Schema(
     },
     interaction: {
       type: Number,
+      height: Number,
       isHazardous: Boolean,
       rarity: Number,
       currentCreatures: [
