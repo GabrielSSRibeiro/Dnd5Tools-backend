@@ -99,6 +99,7 @@ const LocationSchema = new mongoose.Schema(
               ...locationCreature,
             },
           ],
+          boundCreatures: [[String]],
           currentCreatures: [
             {
               _id: false,
@@ -128,6 +129,7 @@ const LocationSchema = new mongoose.Schema(
         ...locationCreature,
       },
     ],
+    boundCreatures: [[String]],
   },
   { typeKey: "$type" }
 );
