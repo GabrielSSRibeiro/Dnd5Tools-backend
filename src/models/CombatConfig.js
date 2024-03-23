@@ -17,12 +17,12 @@ const CombatConfigSchema = new mongoose.Schema(
       exhaustionTimer: Number,
       precipitation: Number,
       oriented: Boolean,
+      isMounted: Boolean,
       isOverlook: Boolean,
       temperature: Number,
       nextConditionsUpdate: Number,
       cummulativeEncounterChance: Number,
       pace: Number,
-      mount: Number,
       load: Number,
       currentNode: travelNode,
       travelNodes: [
