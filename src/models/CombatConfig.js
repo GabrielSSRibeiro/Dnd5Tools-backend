@@ -50,6 +50,7 @@ const CombatConfigSchema = new mongoose.Schema(
           ...locationCreature,
         },
       ],
+      boundCreatures: [[String]],
     },
   },
   { typeKey: "$type" }
