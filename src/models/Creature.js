@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const CreatureSchema = new mongoose.Schema(
   {
     owner: String,
+    isDraft: Boolean,
     name: String,
     description: String,
     image: String,
