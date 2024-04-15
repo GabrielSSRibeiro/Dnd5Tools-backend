@@ -5,6 +5,7 @@ const locationCreature = require("./LocationCreature");
 const LocationSchema = new mongoose.Schema(
   {
     owner: String,
+    isDraft: Boolean,
     name: String,
     exteriorLocationId: String,
     isHidden: Boolean,
