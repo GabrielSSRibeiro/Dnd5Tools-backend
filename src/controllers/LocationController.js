@@ -51,6 +51,19 @@ module.exports = {
     return res.json(updateResponse);
   },
 
+  async UpdateAllLocations(req, res) {
+    // const filter = {
+    //   $and: [{ "reference.distance": { $ne: null } }, { "reference.distance": { $ne: 5 } }],
+    // };
+    // const updates = {
+    //   $inc: {
+    //     "reference.distance": 10,
+    //   },
+    // };
+    // const updateResponse = await Location.updateMany(filter, updates, { returnOriginal: false });
+    // return res.json(updateResponse);
+  },
+
   async DeleteLocations(req, res) {
     const deleteResponse = await Location.deleteMany({ _id: { $in: req.query.ids } });
     return res.json(deleteResponse);
