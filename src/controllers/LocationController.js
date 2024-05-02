@@ -52,16 +52,12 @@ module.exports = {
   },
 
   async UpdateAllLocations(req, res) {
-    // const filter = {
-    //   $and: [{ "reference.distance": { $ne: null } }, { "reference.distance": { $ne: 5 } }],
-    // };
-    // const updates = {
-    //   $inc: {
-    //     "reference.distance": 10,
-    //   },
-    // };
-    // const updateResponse = await Location.updateMany(filter, updates, { returnOriginal: false });
-    // return res.json(updateResponse);
+    let locations = await Location.find();
+    locations.forEach(async (l) => {
+      //do something
+      const updateResponse = await Location.findOneAndUpdate({ _id: l._id }, l, { returnOriginal: false });
+    });
+    return res.json();
   },
 
   async DeleteLocations(req, res) {
