@@ -22,6 +22,7 @@ const CombatConfigSchema = new mongoose.Schema(
       temperature: Number,
       nextConditionsUpdate: Number,
       cummulativeEncounterChance: Number,
+      lastEncounterLocId: String,
       pace: Number,
       load: Number,
       currentNode: travelNode,
