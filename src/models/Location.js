@@ -124,6 +124,7 @@ const LocationSchema = new mongoose.Schema(
     connections: [
       {
         _id: false,
+        seed: String,
         distance: Number,
         direction: Number,
         connectionType: Number,
