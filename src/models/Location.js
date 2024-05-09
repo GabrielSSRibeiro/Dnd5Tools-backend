@@ -115,6 +115,7 @@ const LocationSchema = new mongoose.Schema(
       distance: Number,
       direction: Number,
       location: String,
+      connectionSeed: String,
       connectionType: Number,
       connectionAngle: Number,
       connectionAngleOrigin: Number,
