@@ -116,6 +116,7 @@ const LocationSchema = new mongoose.Schema(
       direction: Number,
       location: String,
       connectionSeed: String,
+      connectionSeedType: Number,
       connectionType: Number,
       connectionAngle: Number,
       connectionAngleOrigin: Number,
@@ -126,6 +127,7 @@ const LocationSchema = new mongoose.Schema(
       {
         _id: false,
         seed: String,
+        seedType: Number,
         distance: Number,
         direction: Number,
         connectionType: Number,
