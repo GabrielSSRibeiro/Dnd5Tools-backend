@@ -49,7 +49,7 @@ const LocationSchema = new mongoose.Schema(
       type: Number,
       height: Number,
       isHazardous: Boolean,
-      rarity: Number,
+      hasTreasure: Boolean,
       currentCreatures: [
         {
           _id: false,
@@ -93,7 +93,7 @@ const LocationSchema = new mongoose.Schema(
           },
           type: Number,
           isHazardous: Boolean,
-          rarity: Number,
+          hasTreasure: Boolean,
           creatures: [
             {
               _id: false,
